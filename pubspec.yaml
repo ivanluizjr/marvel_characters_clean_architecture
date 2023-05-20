@@ -32,6 +32,8 @@ flutter:
 
   assets:
     - assets/images/
+
+  
     
 
   # To add custom fonts to your application, add a fonts section here,
@@ -53,3 +55,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  

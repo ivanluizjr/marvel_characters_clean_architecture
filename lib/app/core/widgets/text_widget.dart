@@ -96,77 +96,6 @@ class TextWidget extends StatelessWidget {
     );
   }
 
-  factory TextWidget.gradient({
-    required String text,
-    final Color? colorText,
-    final double? fontSize,
-    final StrutStyle? strutStyle,
-    final TextAlign? textAlign,
-    final TextDirection? textDirection,
-    final Locale? locale,
-    final bool? softWrap,
-    final TextOverflow? textOverflow,
-    final double? textScaleFactor,
-    final int? maxLines,
-    final String? semanticsLabel,
-    final TextWidthBasis? textWidthBasis,
-    final textHeightBehavior,
-    final FontWeight? fontWeight,
-    final FontStyle? fontStyle,
-    final double? height,
-    final TextDecoration? textDecoration,
-    final double? decorationThickness,
-    final double? letterSpacing,
-    final Color? decorationColor,
-    final List<double>? stops,
-    final Rect? rect,
-    final List<Color> gradientColors = const [
-      Color(0xFF63FE9E),
-      Color(0xFF5EE6BE),
-      Color(0xFF08D7D7),
-      Color.fromRGBO(100, 40, 189, 1),
-    ],
-  }) {
-    final Shader linearGradient = LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: gradientColors,
-      stops: stops ??
-          const [
-            0.60,
-            0.4,
-            0.7,
-            0.81,
-          ],
-    ).createShader(
-      rect ??
-          const Rect.fromLTRB(
-            600.0,
-            0.0,
-            20.0,
-            10.0,
-          ),
-    );
-
-    return TextWidget(
-      text: text,
-      style: GoogleFonts.poppins(
-        letterSpacing: letterSpacing,
-        decorationThickness: decorationThickness,
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        fontStyle: fontStyle,
-        height: height,
-        decoration: textDecoration,
-        decorationColor: decorationColor,
-        foreground: Paint()..shader = linearGradient,
-      ),
-      textAlign: textAlign,
-      textOverflow: textOverflow,
-      maxLines: maxLines,
-    );
-  }
-
   factory TextWidget.inter({
     required String text,
     Color? colorText,
@@ -193,6 +122,90 @@ class TextWidget extends StatelessWidget {
     return TextWidget(
       text: text,
       style: GoogleFonts.inter(
+        letterSpacing: letterSpacing,
+        color: colorText ?? Colors.black,
+        decorationThickness: decorationThickness,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        height: height,
+        decoration: textDecoration,
+        decorationColor: decorationColor,
+      ),
+      textAlign: textAlign,
+      textOverflow: textOverflow,
+      maxLines: maxLines,
+    );
+  }
+
+  factory TextWidget.roboto({
+    required String text,
+    Color? colorText,
+    double? fontSize,
+    StrutStyle? strutStyle,
+    TextAlign? textAlign,
+    TextDirection? textDirection,
+    Locale? locale,
+    bool? softWrap,
+    TextOverflow? textOverflow,
+    double? textScaleFactor,
+    int? maxLines,
+    String? semanticsLabel,
+    TextWidthBasis? textWidthBasis,
+    textHeightBehavior,
+    FontWeight? fontWeight,
+    FontStyle? fontStyle,
+    double? height,
+    TextDecoration? textDecoration,
+    double? decorationThickness,
+    double? letterSpacing,
+    Color? decorationColor,
+  }) {
+    return TextWidget(
+      text: text,
+      style: GoogleFonts.roboto(
+        letterSpacing: letterSpacing,
+        color: colorText ?? Colors.black,
+        decorationThickness: decorationThickness,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        height: height,
+        decoration: textDecoration,
+        decorationColor: decorationColor,
+      ),
+      textAlign: textAlign,
+      textOverflow: textOverflow,
+      maxLines: maxLines,
+    );
+  }
+
+  factory TextWidget.anton({
+    required String text,
+    Color? colorText,
+    double? fontSize,
+    StrutStyle? strutStyle,
+    TextAlign? textAlign,
+    TextDirection? textDirection,
+    Locale? locale,
+    bool? softWrap,
+    TextOverflow? textOverflow,
+    double? textScaleFactor,
+    int? maxLines,
+    String? semanticsLabel,
+    TextWidthBasis? textWidthBasis,
+    textHeightBehavior,
+    FontWeight? fontWeight,
+    FontStyle? fontStyle,
+    double? height,
+    TextDecoration? textDecoration,
+    double? decorationThickness,
+    double? letterSpacing,
+    Color? decorationColor,
+  }) {
+    return TextWidget(
+      text: text,
+      style: GoogleFonts.anton(
         letterSpacing: letterSpacing,
         color: colorText ?? Colors.black,
         decorationThickness: decorationThickness,
