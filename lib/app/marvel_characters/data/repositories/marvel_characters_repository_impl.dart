@@ -1,4 +1,5 @@
 import 'package:either_dart/src/either.dart';
+import 'package:marvel_characters/app/core/services/http_dio_client/http_dio_failure.dart';
 import 'package:marvel_characters/app/marvel_characters/data/datasource/marvel_characters_datasource.dart';
 import 'package:marvel_characters/app/marvel_characters/data/mappers/marvel_characters_mapper.dart';
 import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
@@ -16,11 +17,16 @@ class MarvelCharactersRepositoryImpl implements IMarvelCharactersRepository {
     try {
       final result = await datasource.getMarvelCharacters();
 
-      final marvelEntity = MarvelCharactersMapper.fromMap(result);
+      final marvelEntity = MarvelCharactersMapper.fromMap(result.data);
 
       return Right(marvelEntity);
-    } on Exception catch (e) {
-      throw e.toString();
+    } on HttpDioFailure catch (error) {
+      return Left(
+        MarvelCharatersFailure(
+          message: error.message,
+          stackTrace: error.stackTraceResult,
+        ),
+      );
     }
   }
 }

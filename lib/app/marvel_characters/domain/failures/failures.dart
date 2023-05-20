@@ -4,7 +4,7 @@ import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_c
 abstract class IFailures {
   final String message;
 
-  IFailures(this.message);
+  IFailures({required this.message});
 }
 
 class MarvelCharatersFailure extends IFailures {
@@ -15,7 +15,7 @@ class MarvelCharatersFailure extends IFailures {
   MarvelCharatersFailure({
     required this.message,
     this.stackTrace,
-  }) : super('');
+  }) : super(message: '');
 }
 
 class MarvelCharactersSuccess extends IFailures {
@@ -25,5 +25,5 @@ class MarvelCharactersSuccess extends IFailures {
   MarvelCharactersSuccess({
     this.mapper,
     this.entity,
-  }) : super('');
+  }) : super(message: '');
 }

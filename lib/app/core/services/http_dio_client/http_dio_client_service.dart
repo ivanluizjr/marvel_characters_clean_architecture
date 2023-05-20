@@ -1,6 +1,6 @@
-import 'package:marvel_characters/app/core/services/dio_client/http_response.dart';
+import 'package:marvel_characters/app/core/services/http_dio_client/http_response.dart';
 
-abstract class IDioClientService {
+abstract class IHttpDioClientService {
   Future<HttpDioResponse> get(
     String url, {
     Map<String, dynamic>? headers,
