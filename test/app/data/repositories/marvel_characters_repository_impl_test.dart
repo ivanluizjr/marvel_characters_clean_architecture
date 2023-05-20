@@ -33,18 +33,12 @@ void main() {
           id: 1,
           name: 'Homem de Ferro',
           description: 'O maior dos vingadores',
-          thumbnail: MarvelCharacterThumbnail(
-            path:
-                'https://geekpersonalizado.com.br/wp-content/uploads/2021/06/Homem-de-ferro-foto.jpg',
-            extension: 'jpg',
-          ),
+          thumbnail: thumbnail,
         ),
       ]
     };
 
-    when(() => datasource.getMarvelCharacters()).thenAnswer((_) async {
-      return expectedData;
-    });
+    when(() => datasource.getMarvelCharacters());
 
     final result = await repository.getMarvelCharacters();
 

@@ -1,16 +1,19 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:marvel_characters/app/core/constants/locales/routes/app_routes.dart';
-import 'package:marvel_characters/app/marvel_characters/marvel_characters_module.dart';
+import 'package:marvel_characters/app/marvel_characters/presenter/pages/home_page.dart';
 
-class AppModule extends Module {
+class MarvelCharactersModule extends Module {
+  @override
+  List<Module> get imports => [];
+
   @override
   List<Bind> get binds => [];
 
   @override
   List<ModularRoute> get routes => [
-        ModuleRoute(
+        ChildRoute(
           AppRoutes.initialRoute,
-          module: MarvelCharactersModule(),
-        ),
+          child: (context, args) => const HomePage(),
+        )
       ];
 }

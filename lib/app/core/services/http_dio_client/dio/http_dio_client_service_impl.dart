@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
-import 'package:marvel_characters/app/core/services/dio_client/http_response.dart';
+import 'package:marvel_characters/app/core/services/http_dio_client/http_response.dart';
 
-import '../dio_client_service.dart';
-import '../dio_failure.dart';
+import '../http_dio_client_service.dart';
+import '../http_dio_failure.dart';
 
-class DioClientServiceImpl implements IDioClientService {
+class HttpDioClientServiceImpl implements IHttpDioClientService {
   final Dio dio;
 
-  const DioClientServiceImpl({
+  const HttpDioClientServiceImpl({
     required this.dio,
   });
 
@@ -28,7 +28,7 @@ class DioClientServiceImpl implements IDioClientService {
       final data = response.data;
 
       if (data is Map && data.containsKey('error')) {
-        throw const HttpFailure(
+        throw const HttpDioFailure(
           statusCode: 500,
         );
       }
@@ -38,7 +38,7 @@ class DioClientServiceImpl implements IDioClientService {
         statusCode: response.statusCode ?? 500,
       );
     } on DioError catch (error) {
-      throw HttpFailure(
+      throw HttpDioFailure(
         statusCode: error.response?.statusCode ?? 500,
       );
     }
@@ -64,7 +64,7 @@ class DioClientServiceImpl implements IDioClientService {
       final data = response.data;
 
       if (data is Map && data.containsKey('error')) {
-        throw const HttpFailure(
+        throw const HttpDioFailure(
           statusCode: 500,
         );
       }
@@ -73,7 +73,7 @@ class DioClientServiceImpl implements IDioClientService {
         statusCode: response.statusCode ?? 500,
       );
     } on DioError catch (error) {
-      throw HttpFailure(
+      throw HttpDioFailure(
         statusCode: error.response?.statusCode ?? 500,
       );
     }
@@ -99,7 +99,7 @@ class DioClientServiceImpl implements IDioClientService {
       final data = response.data;
 
       if (data is Map && data.containsKey('error')) {
-        throw const HttpFailure(
+        throw const HttpDioFailure(
           statusCode: 500,
         );
       }
@@ -110,7 +110,7 @@ class DioClientServiceImpl implements IDioClientService {
         cookies: response.headers.map["set-cookie"] ?? [],
       );
     } on DioError catch (error) {
-      throw HttpFailure(
+      throw HttpDioFailure(
         statusCode: error.response?.statusCode ?? 500,
       );
     }
@@ -135,7 +135,7 @@ class DioClientServiceImpl implements IDioClientService {
       final data = response.data;
 
       if (data is Map && data.containsKey('error')) {
-        throw const HttpFailure(
+        throw const HttpDioFailure(
           statusCode: 500,
         );
       }
@@ -144,7 +144,7 @@ class DioClientServiceImpl implements IDioClientService {
         statusCode: response.statusCode ?? 500,
       );
     } on DioError catch (error) {
-      throw HttpFailure(
+      throw HttpDioFailure(
         statusCode: error.response?.statusCode ?? 500,
       );
     }
