@@ -44,6 +44,10 @@ Aplicativo baseado na API da Marvel, mostrando características de cada herói, 
   
   - Procurei desenvolver algo agradável e de boa experiência ao usuário, pois temos somente uma tela, então aquilo que minha criatividade me direcionou, eu desenvolvi.
 
+# :iphone: Testes em Plataformas Android e IOS
+
+  - Fiz somente testes em Plataforma Android por não ter o ambiente de testes em IOS que fica restrito em ter um MacOS ao qual ainda não possuo.
+
 ##
 
  # :iphone: Layout do App
