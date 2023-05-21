@@ -13,11 +13,18 @@ class MarvelCharactersMapper {
     required this.thumbnail,
   });
 
+  static List<MarvelCharactersEntity> fromList(List<dynamic> list) {
+    return list.map((item) => fromMap(item as Map<String, dynamic>)).toList();
+  }
+
   static MarvelCharactersEntity fromMap(Map<String, dynamic> map) {
     final thumbnailData = map['thumbnail'];
+    final path = thumbnailData['path'];
+    final extension = thumbnailData['extension'];
+
     final thumbnail = MarvelCharacterThumbnail(
-      path: thumbnailData['path'],
-      extension: thumbnailData['extension'],
+      path: path != null ? '$path.$extension' : '',
+      extension: extension,
     );
 
     return MarvelCharactersEntity(

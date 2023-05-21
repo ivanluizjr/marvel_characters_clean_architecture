@@ -12,19 +12,25 @@ class MarvelCharactersRepositoryImpl implements IMarvelCharactersRepository {
   MarvelCharactersRepositoryImpl({required this.datasource});
 
   @override
-  Future<Either<IFailures, MarvelCharactersEntity>>
-      getMarvelCharacters() async {
+  Future<Either<IFailures, List<MarvelCharactersEntity>>> getMarvelCharacters(
+      {required MarvelCharactersEntity marvelCharactersEntity}) async {
     try {
-      final result = await datasource.getMarvelCharacters();
+      final List<dynamic> result = await datasource.getMarvelCharacters(
+          marvelCharactersEntity: marvelCharactersEntity);
 
-      final marvelEntity = MarvelCharactersMapper.fromMap(result.data);
+      final marvelEntity = MarvelCharactersMapper.fromList(result);
 
       return Right(marvelEntity);
     } on HttpDioFailure catch (error) {
       return Left(
         MarvelCharatersFailure(
           message: error.message,
-          stackTrace: error.stackTraceResult,
+        ),
+      );
+    } catch (error) {
+      return Left(
+        MarvelCharatersFailure(
+          message: 'An unexpected error occurred.',
         ),
       );
     }

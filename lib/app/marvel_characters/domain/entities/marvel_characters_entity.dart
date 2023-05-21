@@ -13,6 +13,18 @@ class MarvelCharactersEntity extends Equatable {
     required this.thumbnail,
   });
 
+  factory MarvelCharactersEntity.empty() {
+    return MarvelCharactersEntity(
+      id: 1011334,
+      name: '',
+      description: '',
+      thumbnail: MarvelCharacterThumbnail(
+        extension: '',
+        path: '',
+      ),
+    );
+  }
+
   @override
   List<Object?> get props => [
         id,
@@ -20,6 +32,8 @@ class MarvelCharactersEntity extends Equatable {
         description,
         thumbnail,
       ];
+
+  
 }
 
 class MarvelCharacterThumbnail {
@@ -30,6 +44,18 @@ class MarvelCharacterThumbnail {
     required this.path,
     required this.extension,
   });
+
+  static MarvelCharacterThumbnail fromMap(Map<String, dynamic> map) {
+    final path = map['path'];
+    final extension = map['extension'];
+
+    final imageUrl = '$path.$extension';
+
+    return MarvelCharacterThumbnail(
+      path: imageUrl,
+      extension: extension,
+    );
+  }
 
   Map<String, dynamic> toJson() {
     return {

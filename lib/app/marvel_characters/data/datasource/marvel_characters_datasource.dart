@@ -1,5 +1,7 @@
-import 'package:marvel_characters/app/core/services/http_dio_client/http_response.dart';
+import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
 
 abstract class IMarvelCharactersDatasource {
-  Future<HttpDioResponse> getMarvelCharacters();
+  Future<List<dynamic>> getMarvelCharacters({
+    required MarvelCharactersEntity marvelCharactersEntity,
+  });
 }
