@@ -14,7 +14,7 @@ Aplicativo baseado na API da Marvel, mostrando características de cada herói, 
   * Flutter Modular
   * Either
   * Google Fonts
-  * Moctail
+  * Mocktail
 
 ## :file_folder: Organização de pastas e arquivos do projeto:
 
