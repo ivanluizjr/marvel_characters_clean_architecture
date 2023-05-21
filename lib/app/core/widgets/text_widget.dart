@@ -222,6 +222,48 @@ class TextWidget extends StatelessWidget {
     );
   }
 
+  factory TextWidget.inconsolata({
+    required String text,
+    Color? colorText,
+    double? fontSize,
+    StrutStyle? strutStyle,
+    TextAlign? textAlign,
+    TextDirection? textDirection,
+    Locale? locale,
+    bool? softWrap,
+    TextOverflow? textOverflow,
+    double? textScaleFactor,
+    int? maxLines,
+    String? semanticsLabel,
+    TextWidthBasis? textWidthBasis,
+    textHeightBehavior,
+    FontWeight? fontWeight,
+    FontStyle? fontStyle,
+    double? height,
+    TextDecoration? textDecoration,
+    double? decorationThickness,
+    double? letterSpacing,
+    Color? decorationColor,
+  }) {
+    return TextWidget(
+      text: text,
+      style: GoogleFonts.inconsolata(
+        letterSpacing: letterSpacing,
+        color: colorText ?? Colors.black,
+        decorationThickness: decorationThickness,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        height: height,
+        decoration: textDecoration,
+        decorationColor: decorationColor,
+      ),
+      textAlign: textAlign,
+      textOverflow: textOverflow,
+      maxLines: maxLines,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return AutoSizeText(

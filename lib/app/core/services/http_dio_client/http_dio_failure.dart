@@ -1,10 +1,8 @@
 class HttpDioFailure implements Exception {
   final int statusCode;
-  final StackTrace? stackTrace;
 
   const HttpDioFailure({
     required this.statusCode,
-    this.stackTrace,
   });
 
   String get message {
@@ -14,13 +12,6 @@ class HttpDioFailure implements Exception {
     }
 
     return 'Erro inesperado!';
-  }
-
-  StackTrace get stackTraceResult {
-    if (stackTrace != null) {
-      return stackTrace!;
-    }
-    return stackTrace!;
   }
 }
 
