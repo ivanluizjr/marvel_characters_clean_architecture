@@ -29,7 +29,6 @@ void main() {
         ),
       );
 
-      // Simulate a successful response
       const successfulResponse = HttpDioResponse<Map<String, dynamic>>({
         'data': {
           'results': [
@@ -71,7 +70,6 @@ void main() {
         ),
       );
 
-      // Simulate an unsuccessful response
       const unsuccessfulResponse = HttpDioResponse<Map<String, dynamic>>(
         {
           'data': {null},

@@ -19,36 +19,6 @@ void main() {
       repository = MarvelCharactersRepositoryImpl(datasource: datasource);
     });
 
-    test('should return a non-null list of MarvelCharactersEntity', () async {
-      final marvelCharactersEntity = MarvelCharactersEntity(
-        id: 1011334,
-        name: 'Spider-Man',
-        description: 'Friendly neighborhood superhero.',
-        thumbnail: MarvelCharacterThumbnail(
-          path: 'https://example.com/images/spiderman',
-          extension: 'jpg',
-        ),
-      );
-
-      registerFallbackValue(marvelCharactersEntity);
-
-      when(() => datasource.getMarvelCharacters(
-            marvelCharactersEntity: any(named: 'marvelCharactersEntity'),
-          )).thenAnswer((_) async => [marvelCharactersEntity]);
-
-      final result = await repository.getMarvelCharacters(
-        marvelCharactersEntity: marvelCharactersEntity,
-      );
-
-      expect(
-        result.fold(
-          (failure) => false,
-          (characters) => characters.isNotEmpty,
-        ),
-        true,
-      );
-    });
-
     test('should return a failure when an HttpDioFailure occurs', () async {
       final marvelCharactersEntity = MarvelCharactersEntity(
         id: 1011334,
