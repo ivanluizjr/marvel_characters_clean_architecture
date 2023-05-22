@@ -5,9 +5,9 @@ import 'package:marvel_characters/app/core/constants/locales/home/home_locales.d
 import 'package:marvel_characters/app/core/services/media_query_service.dart';
 import 'package:marvel_characters/app/core/themes/colors/app_colors.dart';
 import 'package:marvel_characters/app/core/widgets/text_widget.dart';
-import 'package:marvel_characters/app/marvel_characters/presenter/cubit/home_cubit.dart';
-import 'package:marvel_characters/app/marvel_characters/presenter/cubit/states/home_states.dart';
-import 'package:marvel_characters/app/marvel_characters/presenter/widgets/featured_characters_widget.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/presenter/cubit/home_cubit.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/presenter/cubit/states/home_states.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/presenter/widgets/featured_characters_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:marvel_characters/app/core/services/http_dio_client/http_dio_client_service.dart';
 import 'package:marvel_characters/app/core/services/http_dio_client/http_response.dart';
-import 'package:marvel_characters/app/marvel_characters/data/datasource/impl/marvel_characters_datasource_impl.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/data/datasource/impl/marvel_characters_datasource_impl.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/entities/marvel_characters_entity.dart';
 import 'package:mocktail/mocktail.dart';
 
 class HttpDioClientServiceMock extends Mock implements IHttpDioClientService {}

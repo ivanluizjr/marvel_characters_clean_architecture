@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_characters/app/marvel_characters/presenter/widgets/cards_widget.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/presenter/widgets/cards_widget.dart';
 
 class FeatureCharactersWidget extends StatelessWidget {
   final List<CardData> cardDataList;

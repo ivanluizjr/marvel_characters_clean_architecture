@@ -1,5 +1,5 @@
-import 'package:marvel_characters/app/marvel_characters/data/mappers/marvel_characters_mapper.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/data/mappers/marvel_characters_mapper.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/entities/marvel_characters_entity.dart';
 
 abstract class IFailures {
   final String message;

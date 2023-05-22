@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/usecases/get_marvel_characters_usecase.dart';
-import 'package:marvel_characters/app/marvel_characters/presenter/cubit/states/home_states.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/entities/marvel_characters_entity.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/usecases/get_marvel_characters_usecase.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/presenter/cubit/states/home_states.dart';
 
 class HomeCubit extends Cubit<IHomeStates> {
   final IGetMarvelCharactersUsecase getMarvelCharactersUsecase;

@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:marvel_characters/app/core/services/http_dio_client/http_dio_failure.dart';
-import 'package:marvel_characters/app/marvel_characters/data/datasource/marvel_characters_datasource.dart';
-import 'package:marvel_characters/app/marvel_characters/data/repositories/marvel_characters_repository_impl.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/entities/marvel_characters_entity.dart';
-import 'package:marvel_characters/app/marvel_characters/domain/failures/failures.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/data/datasource/marvel_characters_datasource.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/data/repositories/marvel_characters_repository_impl.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/entities/marvel_characters_entity.dart';
+import 'package:marvel_characters/app/modules/marvel_characters/domain/failures/failures.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MarvelCharactersDatasourceMock extends Mock
