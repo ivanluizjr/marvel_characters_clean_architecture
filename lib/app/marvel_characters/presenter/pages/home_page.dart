@@ -327,7 +327,7 @@ class _HomePageState extends State<HomePage> {
                                           borderRadius:
                                               BorderRadius.circular(10),
                                           child: SizedBox(
-                                            height: 185,
+                                            height: 170,
                                             child: Image.network(
                                               cardData.thumbnail.path,
                                               errorBuilder:
@@ -341,6 +341,8 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                         Expanded(
                                           child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               Padding(
                                                 padding: const EdgeInsets.only(
@@ -353,12 +355,24 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
-                                                    top: 5, left: 5),
-                                                child: TextWidget.inter(
-                                                    text: cardData.description,
-                                                    fontSize: 10,
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                                    top: 15, left: 5),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    TextWidget.roboto(
+                                                      text: 'More Info',
+                                                      colorText:
+                                                          AppColors.black,
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      textDecoration:
+                                                          TextDecoration
+                                                              .underline,
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                             ],
                                           ),

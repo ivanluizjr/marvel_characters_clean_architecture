@@ -81,11 +81,11 @@ class CardsWidget extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextWidget.inconsolata(
+                      TextWidget.roboto(
                         text: 'More Info',
                         colorText: colorText ?? AppColors.black,
                         fontSize: fontSize ?? 14,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
                       ),
                       IconButton(
                         icon: const Icon(Icons.arrow_right),
