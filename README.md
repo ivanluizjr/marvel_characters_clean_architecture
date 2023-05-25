@@ -1,6 +1,6 @@
 # :pencil2: App Marvel Characters - Tudo Sobre Seu Herói
 
-Aplicativo baseado na API da Marvel, mostrando características de cada herói, foi feito 2 listas, uma lista com destaques ou populares a cima com deslocamento horizontal e outra lista com todos os retorno abaixo em deslocamento vertical.
+Aplicativo baseado na API da Marvel, mostrando características de cada herói, foram feitas 2 listas, uma lista com destaques ou populares a cima com deslocamento horizontal e outra lista com todos os retornos abaixo em deslocamento vertical.
 
 ## :heavy_check_mark: Telas do projeto (Unica Tela de Home)
 
