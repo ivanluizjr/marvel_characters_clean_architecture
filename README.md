@@ -20,7 +20,7 @@ Aplicativo baseado na API da Marvel, mostrando características de cada herói, 
 
 ![image](https://github.com/ivanluizjr/sinaxys_pay/assets/41458938/695c94e7-fd50-4bd8-b2c2-f96ac80dbeb2)
 ![image](https://github.com/ivanluizjr/sinaxys_pay/assets/41458938/bbde8348-12ef-4eae-99d3-bc54513fce05)
-![image](https://github.com/ivanluizjr/marvel_characters_clean_architecture/assets/41458938/83c06f19-0f0c-4f8c-8f44-9ff376adb1c8)
+![image](https://github.com/ivanluizjr/marvel_characters_clean_architecture/assets/41458938/887b07f9-5438-40bb-baf0-6c633ac612a9)
 
 ## :keyboard: Estágios de desenvolvimento do projeto:
 
@@ -52,7 +52,7 @@ Aplicativo baseado na API da Marvel, mostrando características de cada herói, 
 
  # :iphone: Layout do App
 
-![Teste_Marvel](https://github.com/ivanluizjr/sinaxys_pay/assets/41458938/6984ceea-1484-49a7-8ebc-bbfce659c636)
+![Marvel](https://github.com/ivanluizjr/marvel_characters_clean_architecture/assets/41458938/31afd0eb-3736-48c0-81ab-1fe4666cb3bc)
 
 #
   
